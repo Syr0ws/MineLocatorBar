@@ -11,6 +11,13 @@ public class WaypointIcon {
     private int color = 0xFFFFFF;
 
     /**
+     * Constructs a default {@link WaypointIcon} with no style and white color.
+     */
+    public WaypointIcon() {
+
+    }
+
+    /**
      * Constructs a {@link WaypointIcon} with the specified style and color.
      *
      * @param style the style to set

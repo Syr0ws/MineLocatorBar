@@ -16,12 +16,23 @@ public class Waypoint {
      *
      * @param waypointId the unique identifier of the waypoint
      * @param location   the location of the waypoint
+     * @throws IllegalArgumentException if any parameter is {@code null}
+     */
+    public Waypoint(UUID waypointId, WaypointLocation location) {
+        this.waypointId = waypointId;
+        this.location = location;
+    }
+
+    /**
+     * Constructs a new {@code Waypoint}.
+     *
+     * @param waypointId the unique identifier of the waypoint
+     * @param location   the location of the waypoint
      * @param icon       the icon representing the waypoint
      * @throws IllegalArgumentException if any parameter is {@code null}
      */
     public Waypoint(UUID waypointId, WaypointLocation location, WaypointIcon icon) {
-        this.setWaypointId(waypointId);
-        this.setLocation(location);
+        this(waypointId, location);
         this.setIcon(icon);
     }
 
