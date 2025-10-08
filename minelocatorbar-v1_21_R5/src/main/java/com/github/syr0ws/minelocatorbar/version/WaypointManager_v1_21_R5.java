@@ -17,6 +17,23 @@ public class WaypointManager_v1_21_R5 implements WaypointManager {
 
     @Override
     public void show(Player player, Waypoint waypoint) {
+        ClientboundTrackedWaypointPacket packet = this.createWaypoint(waypoint, ClientboundTrackedWaypointPacket::addWaypointPosition);
+        ((CraftPlayer) player).getHandle().connection.send(packet);
+    }
+
+    @Override
+    public void update(Player player, Waypoint waypoint) {
+        ClientboundTrackedWaypointPacket packet = this.createWaypoint(waypoint, ClientboundTrackedWaypointPacket::updateWaypointPosition);
+        ((CraftPlayer) player).getHandle().connection.send(packet);
+    }
+
+    @Override
+    public void hide(Player player, UUID waypointId) {
+        ClientboundTrackedWaypointPacket packet = ClientboundTrackedWaypointPacket.removeWaypoint(waypointId);
+        ((CraftPlayer) player).getHandle().connection.send(packet);
+    }
+
+    private ClientboundTrackedWaypointPacket createWaypoint(Waypoint waypoint, WaypointPacketProvider packetProvider) {
 
         UUID waypointId = waypoint.getWaypointId();
         WaypointIcon icon = waypoint.getIcon();
@@ -29,14 +46,11 @@ public class WaypointManager_v1_21_R5 implements WaypointManager {
 
         Vec3i vec3i = new Vec3i((int) location.x(), (int) location.y(), (int) location.z());
 
-        ClientboundTrackedWaypointPacket packet = ClientboundTrackedWaypointPacket.addWaypointPosition(waypointId, nmsIcon, vec3i);
-
-        ((CraftPlayer) player).getHandle().connection.send(packet);
+        return packetProvider.createPacket(waypointId, nmsIcon, vec3i);
     }
 
-    @Override
-    public void hide(Player player, UUID waypointId) {
-        ClientboundTrackedWaypointPacket packet = ClientboundTrackedWaypointPacket.removeWaypoint(waypointId);
-        ((CraftPlayer) player).getHandle().connection.send(packet);
+    @FunctionalInterface
+    private interface WaypointPacketProvider {
+        ClientboundTrackedWaypointPacket createPacket(UUID waypointId, net.minecraft.world.waypoints.Waypoint.Icon icon, Vec3i vec3i);
     }
 }

@@ -18,6 +18,14 @@ public interface WaypointManager {
     void show(Player player, Waypoint waypoint);
 
     /**
+     * Updates an existing {@link Waypoint} for a {@link Player}.
+     *
+     * @param player   the player to update the waypoint for
+     * @param waypoint the waypoint to update
+     */
+    void update(Player player, Waypoint waypoint);
+
+    /**
      * Hides a waypoint from a {@link Player}.
      *
      * @param player     the player to hide the waypoint from
