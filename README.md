@@ -2,7 +2,7 @@
 
 # MineLocatorBar
 
-A lightweight Spigot library for displaying static waypoints in the Minecraft locator bar.
+A lightweight Spigot library for displaying waypoints in the Minecraft locator bar.
 
 ## Compatibility
 
