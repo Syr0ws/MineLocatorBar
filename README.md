@@ -70,7 +70,7 @@ void hide(Player player, UUID waypointId);
 ```
 
 The `Waypoint` class represents a waypoint to be displayed in the locator bar. A waypoint must have a unique ID and a location
-represented by a `WaypointLocation` class. Optionally, a style and an icon can be set using the `WaypointIcon` class.
+represented by a `WaypointLocation` class. Optionally, a style and a color can be set using the `WaypointIcon` class.
 
 ```java
 // Build the waypoint.
