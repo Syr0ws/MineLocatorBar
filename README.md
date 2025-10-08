@@ -62,6 +62,9 @@ This class provides the following methods :
 // Show a waypoint to a player.
 void show(Player player, Waypoint waypoint);
 
+// Update an existing waypoint for a player.
+void update(Player player, Waypoint waypoint);
+
 // Hide a waypoint from a player.
 void hide(Player player, UUID waypointId);
 ```
