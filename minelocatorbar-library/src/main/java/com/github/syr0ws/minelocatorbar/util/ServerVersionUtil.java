@@ -5,10 +5,19 @@ import org.bukkit.Bukkit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * Utility class for manipulating Minecraft server versions.
+ */
 public class ServerVersionUtil {
 
     private static final Pattern VERSION_PATTERN = Pattern.compile("(\\d\\.\\d+\\.\\d+)");
 
+    /**
+     * Returns the current Minecraft version.
+     *
+     * @return the Minecraft version string
+     * @throws ServerVersionNotFoundException if the version cannot be parsed
+     */
     public static String getCurrentMinecraftVersion() throws ServerVersionNotFoundException {
 
         // Bukkit version should always contain the Minecraft version.
@@ -22,6 +31,12 @@ public class ServerVersionUtil {
         return matcher.group(1);
     }
 
+    /**
+     * Returns the current NMS version corresponding to the running Minecraft server.
+     *
+     * @return the NMS version string
+     * @throws ServerVersionNotFoundException if the server version is unsupported or cannot be determined
+     */
     public static String getCurrentNMSVersion() throws ServerVersionNotFoundException {
 
         String minecraftVersion = getCurrentMinecraftVersion();
