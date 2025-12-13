@@ -39,6 +39,12 @@
             <version>1.1.0</version>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>com.github.syr0ws</groupId>
+            <artifactId>minelocatorbar-v1_21_R7</artifactId>
+            <version>1.1.0</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <build>

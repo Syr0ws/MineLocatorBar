@@ -15,6 +15,7 @@
         <module>minelocatorbar-api</module>
         <module>minelocatorbar-v1_21_R5</module>
         <module>minelocatorbar-v1_21_R6</module>
+        <module>minelocatorbar-v1_21_R7</module>
     </modules>
 
     <properties>
