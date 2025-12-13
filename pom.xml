@@ -8,7 +8,7 @@
 
     <groupId>com.github.syr0ws</groupId>
     <artifactId>minelocatorbar</artifactId>
-    <version>1.1.0</version>
+    <version>1.2.0</version>
 
     <modules>
         <module>minelocatorbar-library</module>
