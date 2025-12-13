@@ -13,9 +13,6 @@
     <artifactId>minelocatorbar-v1_21_R6</artifactId>
 
     <properties>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spigot.version>1.21.9-R0.1-SNAPSHOT</spigot.version>
     </properties>
 
