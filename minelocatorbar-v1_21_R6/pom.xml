@@ -20,7 +20,7 @@
         <dependency>
             <groupId>com.github.syr0ws</groupId>
             <artifactId>minelocatorbar-api</artifactId>
-            <version>${parent.version}</version>
+            <version>${project.parent.version}</version>
         </dependency>
         <dependency>
             <groupId>org.spigotmc</groupId>
