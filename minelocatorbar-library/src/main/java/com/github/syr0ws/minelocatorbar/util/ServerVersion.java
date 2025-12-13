@@ -12,7 +12,8 @@ public enum ServerVersion {
     v1_21_7("1_21_R5"),
     v1_21_8("1_21_R5"),
     v1_21_9("1_21_R6"),
-    v1_21_10("1_21_R6");
+    v1_21_10("1_21_R6"),
+    v1_21_11("1_21_R7");
 
     private final String minecraftVersion;
     private final String nmsVersion;
