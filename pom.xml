@@ -7,12 +7,12 @@
     <packaging>pom</packaging>
 
     <groupId>com.github.syr0ws</groupId>
-    <artifactId>minelocatorbar</artifactId>
+    <artifactId>MineLocatorBar</artifactId>
     <version>1.2.0</version>
 
     <modules>
-        <module>minelocatorbar-library</module>
         <module>minelocatorbar-api</module>
+        <module>minelocatorbar-library</module>
         <module>minelocatorbar-v1_21_R5</module>
         <module>minelocatorbar-v1_21_R6</module>
         <module>minelocatorbar-v1_21_R7</module>
