@@ -2,7 +2,7 @@
 
 # MineLocatorBar
 
-A lightweight Spigot library for displaying waypoints in the Minecraft locator bar.
+A lightweight Spigot library for displaying waypoints in the locator bar in Minecraft.
 
 ## Compatibility
 
@@ -10,18 +10,27 @@ The library is currently compatible with the following Minecraft versions: `1.21
 
 ## Install
 
-MineLocatorBar can be included in your project by using a dependency manager like **Maven** or **Gradle**.
+Below is a detailed guide on how to import MineLocatorBar in your project.
+
+### Using Maven or Gradle
+
+**Step 1:** Download the latest version of the source code from the [Releases page](https://github.com/Syr0ws/MineLocatorBar/releases).
+
+**Step 2:** Unzip the source code and open the unzipped folder. Open a terminal and perform the following command to install
+MineLocatorBar locally:
+```bash
+mvn clean install
+```
+
+> _Note: This step requires having Maven. You can follow [this guide](https://maven.apache.org/install.html) to download and install Maven._
+
+**Step 3:** Import the dependency in your project by using the following code depending on you are using Maven or Gradle.
 
 **Maven**
 ```xml
-<repository>
-    <id>jitpack.io</id>
-    <url>https://jitpack.io</url>
-</repository>
-
 <dependency>
     <groupId>com.github.Syr0ws</groupId>
-    <artifactId>MineLocatorBar</artifactId>
+    <artifactId>minelocatorbar-library</artifactId>
     <version>{VERSION}</version>
     <scope>compile</scope>
 </dependency>
@@ -29,19 +38,21 @@ MineLocatorBar can be included in your project by using a dependency manager lik
 
 **Gradle**
 ```groovy
-
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         mavenCentral()
-        maven { url 'https://jitpack.io' }
     }
 }
 
 dependencies {
-    implementation 'com.github.Syr0ws:MineLocatorBar:{VERSION}'
+    implementation 'com.github.Syr0ws:minelocatorbar-library:{VERSION}'
 }
 ```
+
+> _Note: Replace `{VERSION}` by the latest version number of MineLocatorBar._
+
+### Using the JAR file
 
 Another option is to directly include the JAR file as a dependency of your plugin. This latest version of the JAR file 
 can be downloaded on the [Releases page](https://github.com/Syr0ws/MineLocatorBar/releases).
