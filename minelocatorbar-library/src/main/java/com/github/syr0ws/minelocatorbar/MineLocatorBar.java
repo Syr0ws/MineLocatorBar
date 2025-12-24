@@ -1,8 +1,7 @@
 package com.github.syr0ws.minelocatorbar;
-
-import com.github.syr0ws.minelocatorbar.util.NMSVersion;
-import com.github.syr0ws.minelocatorbar.util.ServerVersionNotFoundException;
-import com.github.syr0ws.minelocatorbar.util.ServerVersionUtil;
+import com.github.syr0ws.crafter.nms.NMSVersion;
+import com.github.syr0ws.crafter.nms.ServerVersionNotFoundException;
+import com.github.syr0ws.crafter.nms.ServerVersionUtil;
 import com.github.syr0ws.minelocatorbar.version.WaypointManager_v1_21_R5;
 import com.github.syr0ws.minelocatorbar.version.WaypointManager_v1_21_R6;
 import com.github.syr0ws.minelocatorbar.version.WaypointManager_v1_21_R7;
