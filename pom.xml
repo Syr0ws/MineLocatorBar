@@ -7,7 +7,7 @@
     <packaging>pom</packaging>
 
     <groupId>com.github.syr0ws</groupId>
-    <artifactId>minelocator-parent</artifactId>
+    <artifactId>minelocatorbar-parent</artifactId>
     <version>1.2.0</version>
 
     <modules>
