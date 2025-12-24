@@ -8,22 +8,22 @@ import java.util.Optional;
  */
 public enum ServerVersion {
 
-    v1_21_6("1_21_R5"),
-    v1_21_7("1_21_R5"),
-    v1_21_8("1_21_R5"),
-    v1_21_9("1_21_R6"),
-    v1_21_10("1_21_R6"),
-    v1_21_11("1_21_R7");
+    v1_21_6(NMSVersion.v1_21_R5),
+    v1_21_7(NMSVersion.v1_21_R5),
+    v1_21_8(NMSVersion.v1_21_R5),
+    v1_21_9(NMSVersion.v1_21_R6),
+    v1_21_10(NMSVersion.v1_21_R6),
+    v1_21_11(NMSVersion.v1_21_R7);
 
     private final String minecraftVersion;
-    private final String nmsVersion;
+    private final NMSVersion nmsVersion;
 
     /**
      * Constructs a {@code ServerVersion} with its corresponding NMS version.
      *
-     * @param nmsVersion the NMS version string
+     * @param nmsVersion the NMS version
      */
-    ServerVersion(String nmsVersion) {
+    ServerVersion(NMSVersion nmsVersion) {
         this.minecraftVersion = this.name().substring(1).replace("_", ".");
         this.nmsVersion = nmsVersion;
     }
@@ -42,7 +42,7 @@ public enum ServerVersion {
      *
      * @return the NMS version
      */
-    public String getNmsVersion() {
+    public NMSVersion getNmsVersion() {
         return nmsVersion;
     }
 

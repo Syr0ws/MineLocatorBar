@@ -1,6 +1,7 @@
 package com.github.syr0ws.minelocatorbar.util;
 
 import org.bukkit.Bukkit;
+import org.bukkit.Server;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -15,7 +16,7 @@ public class ServerVersionUtil {
     /**
      * Returns the current Minecraft version.
      *
-     * @return the Minecraft version string
+     * @return the Minecraft version string (ex: 1.21.6)
      * @throws ServerVersionNotFoundException if the version cannot be parsed
      */
     public static String getCurrentMinecraftVersion() throws ServerVersionNotFoundException {
@@ -34,10 +35,10 @@ public class ServerVersionUtil {
     /**
      * Returns the current NMS version corresponding to the running Minecraft server.
      *
-     * @return the NMS version string
-     * @throws ServerVersionNotFoundException if the server version is unsupported or cannot be determined
+     * @return the current NMS version
+     * @throws ServerVersionNotFoundException if the Minecraft version is not supported or cannot be determined
      */
-    public static String getCurrentNMSVersion() throws ServerVersionNotFoundException {
+    public static NMSVersion getCurrentNMSVersion() throws ServerVersionNotFoundException {
 
         String minecraftVersion = getCurrentMinecraftVersion();
 
