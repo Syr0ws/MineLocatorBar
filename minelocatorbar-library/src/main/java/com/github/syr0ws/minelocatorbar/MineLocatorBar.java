@@ -5,6 +5,7 @@ import com.github.syr0ws.crafter.version.ServerVersionUtil;
 import com.github.syr0ws.minelocatorbar.version.WaypointManager_v1_21_R5;
 import com.github.syr0ws.minelocatorbar.version.WaypointManager_v1_21_R6;
 import com.github.syr0ws.minelocatorbar.version.WaypointManager_v1_21_R7;
+import com.github.syr0ws.minelocatorbar.version.WaypointManager_v26_1;
 
 import java.util.Map;
 import java.util.function.Supplier;
@@ -20,7 +21,8 @@ public class MineLocatorBar {
     private static final Map<NMSVersion, Supplier<WaypointManager>> WAYPOINT_MANAGERS = Map.of(
             NMSVersion.v1_21_R5, WaypointManager_v1_21_R5::new,
             NMSVersion.v1_21_R6, WaypointManager_v1_21_R6::new,
-            NMSVersion.v1_21_R7, WaypointManager_v1_21_R7::new
+            NMSVersion.v1_21_R7, WaypointManager_v1_21_R7::new,
+            NMSVersion.v26_1, WaypointManager_v26_1::new
     );
 
     /**
