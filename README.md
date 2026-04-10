@@ -6,7 +6,8 @@ A lightweight Spigot library for displaying waypoints in the locator bar in Mine
 
 ## Compatibility
 
-The library is currently compatible with the following Minecraft versions: `1.21.6`, `1.21.7`, `1.21.8`, `1.21.9`, `1.21.10`, `1.21.11`.
+The library is currently compatible with the following Minecraft versions: `1.21.6`, `1.21.7`, `1.21.8`, `1.21.9`, `1.21.10`, `1.21.11`,
+`26.1`, `26.1.1`, `26.1.2`.
 
 ## Install
 
