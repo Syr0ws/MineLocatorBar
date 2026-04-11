@@ -18,11 +18,13 @@ public class MineLocatorBar {
     /**
      * Map of NMS versions associated with their corresponding WaypointManager implementation.
      */
+    // Intentionally using lambda instead of ::new to avoid early class loading and classes of other versions
+    // to be imported.
     private static final Map<NMSVersion, Supplier<WaypointManager>> WAYPOINT_MANAGERS = Map.of(
-            NMSVersion.v1_21_R5, WaypointManager_v1_21_R5::new,
-            NMSVersion.v1_21_R6, WaypointManager_v1_21_R6::new,
-            NMSVersion.v1_21_R7, WaypointManager_v1_21_R7::new,
-            NMSVersion.v26_1, WaypointManager_v26_1::new
+            NMSVersion.v1_21_R5, () -> new WaypointManager_v1_21_R5(),
+            NMSVersion.v1_21_R6, () -> new WaypointManager_v1_21_R6(),
+            NMSVersion.v1_21_R7, () -> new WaypointManager_v1_21_R7(),
+            NMSVersion.v26_1, () -> new WaypointManager_v26_1()
     );
 
     /**
