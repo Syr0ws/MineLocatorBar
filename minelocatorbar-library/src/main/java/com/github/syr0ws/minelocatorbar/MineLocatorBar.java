@@ -24,7 +24,8 @@ public class MineLocatorBar {
             NMSVersion.v1_21_R5, () -> new WaypointManager_v1_21_R5(),
             NMSVersion.v1_21_R6, () -> new WaypointManager_v1_21_R6(),
             NMSVersion.v1_21_R7, () -> new WaypointManager_v1_21_R7(),
-            NMSVersion.v26_1, () -> new WaypointManager_v26_1()
+            NMSVersion.v26_1, () -> new WaypointManager_v26_1(),
+            NMSVersion.v26_2, () -> new WaypointManager_v26_1()
     );
 
     /**
